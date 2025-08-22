@@ -33,7 +33,7 @@ cd UniNotes
 3. Navigate to and select your cloned `UniNotes` directory
 4. Click **"Open"**
 
-### 3. Start Exploring! 
+### 3. Start Learning 
 
  Your notes are now ready to use. Obsidian will automatically:
 - Detect all markdown files
