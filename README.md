@@ -1,6 +1,6 @@
 # UniNotes
 
-> A comprehensive collection of university notes, organized and optimized for [Obsidian](https://obsidian.md/)
+> A comprehensive collection of university notes for Cambridge MEng, organized and optimized for [Obsidian](https://obsidian.md/)
 
 ## What's Inside
 
