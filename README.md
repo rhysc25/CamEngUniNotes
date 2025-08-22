@@ -79,7 +79,7 @@ UniNotes/
 └── Images/
 ```
 
-## 📱 Sync Across Devices
+## Sync Across Devices
 
 To keep your notes synchronized:
 - **Obsidian Sync** (paid): Official sync service
@@ -90,7 +90,7 @@ To keep your notes synchronized:
 
 <div align="center">
 
-*If you find these notes helpful, consider giving the repo a ⭐*
+*If you find these notes helpful, consider giving the repo a star*
 
 </div>
 
@@ -98,4 +98,4 @@ To keep your notes synchronized:
 
 ## Questions?
 
-Feel free to open an issue if you have any questions or suggestions!
+Feel free to open an issue if you have any questions or suggestions
