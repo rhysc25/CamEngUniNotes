@@ -10,11 +10,11 @@ We can integrate over many tiny segments to give: $B=\frac{\mu_0I}{2\pi r}$
 
 Circulation of B = B X Path length of a 360° closed loop
 
-Ampere's law: The circulation of \textbf{B} around any closed path C is $\mu_0I$.
+Ampere's law: The circulation of $\textbf{B}$ around any closed path C is $\mu_0I$.
 
 This is $\mu_0IN$ for a winding, where N is the number of turns around the mean path that B takes.
 
-When calculating the circulation of \textbf{B}, we consider only the component of \textbf{B} that is parallel to the closed path.
+When calculating the circulation of $\textbf{B}$, we consider only the component of $\textbf{B}$ that is parallel to the closed path.
 
 Using a small angle approximation, we can say that $Bdl\cos(\alpha)=Brd\theta$. Then we can integrate from 0 to $\theta = 2\pi$
 
@@ -38,7 +38,7 @@ This becomes: $W=\frac{1}{2}L_1I_1^2+\frac{1}{2}L_2I_2^2+MI_1I_2$
 
 $F=I_1I_2\frac{\delta M}{\delta x}$
 
-When an AC current in a wire is changing at a very high frequency, strong opposing emfs are induced in the centre of the wire, causing opposing eddy currents. The resultant effect is that the current will tend to flow near the surface of the wire. This is called the skin effect. The skin depth, $\delta$, increases as frequency increases.
+When an AC current in a wire is changing at a very high frequency, strong opposing emfs are induced in the centre of the wire, causing opposing eddy currents. The resultant effect is that the current will tend to flow near the surface of the wire. This is called the skin effect. The skin depth, $\delta$, decreases as frequency increases.
 
 $\delta=\frac{1}{\sqrt{\pi\mu_0\sigma f}}=\frac{\sqrt{\rho}}{\sqrt{\pi\mu_0 f}}$
 
@@ -54,11 +54,11 @@ Ampere's law: $Bl=\mu_0NI+\mu_oI_m=\mu_0NI+\mu_o\chi_mNI$, as we expect $I_m$ to
 
 $1+\chi_m=\mu_r \Rightarrow Bl=\mu_0\mu_rNI$
 
-We now define the magnetic field intensity, \textbf{H}. Units: $Am^{-1}$
+We now define the magnetic field intensity, $\textbf{H}$. Units: $Am^{-1}$
 
 $\textbf{B}=\mu_0\mu_r\textbf{H}$
 
-$\sum \textbf{H}dl=NI$. $NI$ is often called the magnetomotive force, of mmf.
+$\sum \textbf{H}dl=NI$. $NI$ is often called the magnetomotive force, or MMF.
 
 Mag flux density lines always form closed loops, there must be a north and south pole.
 

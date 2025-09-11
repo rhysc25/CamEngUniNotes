@@ -14,7 +14,7 @@ If we consider the distance $|\textbf{r}-\textbf{c}|$, the distance between the 
 The vector product is non-commutative. We can form cyclic rotations of vectors. $\textbf{i} \Rightarrow \textbf{j} \Rightarrow \textbf{k} ...$ and $\textbf{-i} \Rightarrow \textbf{-k} \Rightarrow \textbf{-j} ...$
 $\textbf{a} \times \textbf{b} = -\textbf{b} \times \textbf{a}$
 
-Any $\textbf{r} = \alpha \textbf{a}+\beta \textbf{b} + \gamma \textbf{a} \times \textbf{b}$
+Any $\textbf{r} = \alpha \textbf{a}+\beta \textbf{b} + \gamma \textbf{a} \times \textbf{b}$, provided $\textbf{a}$ and $\textbf{b}$ aren't parallel
 
 The minimum distance between a line and the origin is $\hat{\textbf{t}} \times \textbf{r}$
 

@@ -36,7 +36,7 @@ $\nabla f$ always points in the direction of greatest change for the function
 The direction of a contour must be perpendicular to $\nabla f$
 When we have a function of 3 variables, if we hold $f(x,y,z) =$ constant, we can draw level surfaces
 
-$\nabla f$ is always normal to the level surface
+$\nabla f$ is always normal to the level surface, where a level surface is just a collection of all the points that have the same value
 
 $z^2=4(x^2+y^2)$ is a cone of revolution
 

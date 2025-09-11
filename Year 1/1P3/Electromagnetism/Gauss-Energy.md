@@ -40,7 +40,7 @@ The electrostatic force F in a direction x is given by: $F=\frac{1}{2}V^2\frac{\
 
 Determine an expression for capacitance in terms of x, and differentiate.
 
-A dielectric pushed into a capacitor is equivalent to two capacitors in parallel, so their capacitances sum.
+A dielectric pushed into a capacitor is equivalent to two capacitors in series, so the inverse of their capacitances sum.
 
 Deriving virtual work equation: Imagine a fixed region of charge -q and a movable region of charge +q, with a constant voltage V between them. Imagine there is a force keeping them separate. Imagine the +q moves a distance dx towards the other conductor. The capacitance will change by dC, so a charge dq will be added
 
