@@ -6,6 +6,8 @@ The stiffness of metals, ionic crystals or covalent solids is determined by the 
 
 Foams are easy to deform because deformations are accommodated by bending the cell walls, with greatly reduced distortion at the atomic scale
 
+The Young's modulus of polymers can be varied easily without changing density
+
 **Polymers**
 
 Amorphous:
@@ -35,6 +37,7 @@ The result holds for larger dimensions
 
 Substituting for expressions of n, r and a only, then using Stirling's approximation we get that $f=\frac{k_B T}{na^2}r$
 So the entropic spring constant is $\frac{k_B T}{na^2}$
+Therefore stiffness increases as temperature increases
 
 In the absence of any force this says the mean end-to-end distance would be zero, but we know it's not. 
 We need to find the root mean squared end-to-end distance, or the radius of gyration
@@ -52,6 +55,7 @@ When cross linking takes place, polymers are just behaving like single flexible 
 The typical distance between two points in the chain separated by n monomers is $\sqrt{n} a$
 Hence, the number $n_c$ of monomers between cross links is given by:
 $r_c=\sqrt{n_c} a \Rightarrow n_c=\frac{r_c^2}{a^2}$
+Where $r_c$ is the distance between crosslinks
 
 The effective spring constant of each polymer segment between cross links is therefore $k=\frac{k_B T}{r_c^2}$
 
@@ -65,6 +69,8 @@ This gives the Young's modulus, $E=\frac{F}{\delta x r_c}= \frac{k_BTa^2}{v_mr_c
 
 Reminder: $v_m$ is the volume of a monomer and $n_c$ is the number of monomers between cross links
 
-So stiffness increases with temperature. This is visible experimentally, but often limited due to the proximity to the glass transition temperature of the polymers which cause a great decrease in stiffness
+So stiffness increases with temperature. This is visible experimentally, but often limited due to the proximity to the glass transition temperature of the polymers which cause a great decrease in stiffness. Also longer chains between linkages also reduces the modulus.
+
+
 
 

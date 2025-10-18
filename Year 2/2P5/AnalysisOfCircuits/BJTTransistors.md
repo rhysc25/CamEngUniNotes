@@ -11,6 +11,7 @@ Under reverse bias, p-side negative, majority carriers repelled from the junctio
 
 Construction of the bipolar transistor:
 ![[BipolarTransistorConstruction.png]]
+$n^+$ means higher levels of doping so lower resistance
 
 Two diodes back to back (npn). 
 The arrow on the circuit diagram show the direction of conventional current. Collector to emitter for npn, opposite for pnp.
@@ -22,6 +23,10 @@ $\alpha$ is the 'common base current gain'
 
 By Kirchoff's law: $I_E=I_C+I_B \Rightarrow I_C=\frac{\alpha}{1-\alpha}I_B=\beta I_B=h_{FE}I_B$
 $\beta=h_{FE}=\frac{I_C}{I_B}$, where $h_{FE}$ is the current gain, between 20 and 500
+
+$h_{FE}$ is DC current gain for the transistor, which is relatively constant 
+
+Normally we'd try and hold $V_{CB}$ constant, vary $V_{BE}$ and measure $V_{CE}$
 
 Input characteristic:
 ![[TransistorCharacteristic.png]]
@@ -76,7 +81,9 @@ Where:
 * $h_{oe}$: output conductance $(1/h_{oe})$ ~ 50 - 200 $k\Omega$
 For a pnp everything is reverse polarity
 
-The reverse voltage transfer ratio $h_{re}$ is almost invariably ignored
+$i_b$ is always the current flowing through $h_{ie}$
+
+The reverse voltage transfer ratio $h_{re}$ is almost invariably ignored. This is because we are assuming $V_{CE}$ to be relatively constant
 
 Solve just as you would for a FET, drawing the small signal model, grounding $V_{CC}$
 
@@ -91,16 +98,24 @@ Including a resistance in the emitter circuit enables a stable
 operating point to be achieved, albeit at the expense of circuit complexity
 Remember the bypass capacitor, blocking in DC and shorting in AC, as a resistor at the emitter reduces gain significantly
 
-Using a Thevenin equivalent allows you to replace $R_1$ and $R_2$ with $V_T$ and $R_T$
+**Bias Circuit**
+Using a Thevenin equivalent allows you to replace $R_1$ and $R_2$ with $V_T$ and $R_T$, for any circuit with a "potential divider", as the base current is negligible
 ![[ThevEquivalent.png]]
 
 We can do mesh analysis around the first loop (with $V_T$ in it), providing us with an equation for:
 $I_C=\frac{h_{FE}(V_T-V_{BE})}{R_T+R_4(1+h_{FE})}$
 
+$R_4$ does reduce gain, but this can be mitigated by placing a capacitor across it.
+
 **Emitter Follower**
 If we want a buffer, we need a high input impedance and a low output impedance. For that we use an emitter follower:
 ![[EmitterFollower.png]]
 $R_1$ provides base current which sets the operating point. The stability of the operating point is reasonable because of the presence of $R_2$.
+
+For acting as a buffer:
+A BJT circuit has good (high) $R_{IN}$ and a great (very low) $R_{OUT}$
+A FET circuit has slightly better $R_{IN}$ but bad $R_{OUT}$
+
 
 
 

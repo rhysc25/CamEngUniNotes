@@ -58,7 +58,7 @@ The maximum available power can be achieved when the process is reversible
 From the first law: $\dot{m}(h_2-h_1) =-\dot{Q}_0-(\dot{W}_x+\dot{W}_Q)$
 From the second law: $\dot{m}(s_2-s_1)=-\frac{\dot{Q}_0}{T_0}$ as reversible
 
-Therefore the maximum available power of flow from state 1 to 2 is  $\dot{W}_x+\dot{W}_Q=\dot{m}[(h_2-h_1) - T_0(s_1-s_2)]$
+Therefore the maximum available power of flow from state 1 to 2 is  $\dot{W}_x+\dot{W}_Q=\dot{m}[(h_2-h_1) - T_0(s_2-s_1)]$
 Rewriting gives $\dot{W}_{max12}=\dot{m}(b_1-b_2)=\dot{m}[(h_1-T_0s_1) - (h_2-T_0s_2)]$
 Where b is defined as the specific steady flow availability function
 
@@ -86,6 +86,9 @@ $\Delta$ energy = $\Delta$ available energy + $\Delta$ unavailable energy
 $\Delta \dot{H}_{12}=\dot{m}\Delta  b_{12} + \Delta \dot{Q}_{0_{12}}$
 where 1 is inlet and 2 is exit, and $\dot{Q}_{0_1}=T_0(\dot{S}_1-\dot{S}_0)$
 
+$\int (1-\frac{T_0}{T})d\dot{Q}$ is the available power added to the system. Alternatively you can do $b_e-b_i$ over a component which you know adds available power, like a combustion engine. You work out the loss of available power across components using $b_e-b_i$ for each. 
+Then the second law efficiency is the net work output / the total available power added.
+
 **Gas Turbines**
 
 Real gas turbines:
@@ -93,9 +96,21 @@ Real gas turbines:
 * Combustion changes gas composition
 * The compressor and turbine contain irreversibilities (This is the main effect in real gas turbines so will be focused on)
 
+The first two of these simply require changing values halfway through the cycle (Remember to recalculate $\gamma$ and R and $c_p$)
+
 ![[IdealVsRealGasTurbine.png]]
 $(\dot{W}_T)_{real}=\eta_T \times (T_3-T_{4s})$
+
+Compressors and turbines now have fraction isentropic efficiencies.
+The isentropic efficiency of a compressor will be ideal work over real work, as the real work required will be bigger.
+The isentropic efficiency of a turbine will be real work over ideal work, as the real work output will be smaller.
+
+First calculate the ideal isentropic value of $T_s$ using isentropic relations, then use this to find the real value using the isentropic efficiency, and the knowledge that turbines and compressors are still adiabatic.
+
+Compressor and turbine blades have large surface area, contain many leakage jets and involve the mixing of streams of different temperature, all resulting in irreversible entropy generation.
 
 ![[GasTurbineVsJetEngine.png]]
 The difference between a gas turbine and a jet engine
 
+The first law/ thermal efficiency is what you got over what you paid.
+The second law/ rational efficiency is what you got over what you feasibly could have got out, considering available work added to the system.

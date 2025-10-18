@@ -35,10 +35,11 @@ Consider two systems, each containing $\Omega_1$ and $\Omega_2$ microstates, the
 
 $$S=k_b \ln(\Omega)$$
 Where $k_b$ is the Boltzmann Constant, $1.380649 \times 10^{-23}JK^{-1}$
+We apply the natural log to the number of configurations, so that when we add volume, entropy increases via the multiplication of configuration numbers, not the addition, as we know that it should be an extensive property.
 
 Assumes isolated system
 
-From an information perspective, we can ask how many Yes-No questions we should ask, at a minimum, to know where the particle is. This number, expressed in bits, represents the information content of the answer.
+From an information perspective, we can ask how many Yes-No questions we should ask, at a minimum, to know where the particle is. This number, expressed in bits, represents the information content of the answer. Only 4 questions are needed to determine the location in a 4 by 4 grid.
 
 **Entropy of Mixing**
 
@@ -57,9 +58,11 @@ $\ln(\Omega)=n_a \ln(n)+n_b \ln(n)-n_a \ln(n_a)-n_b\ln(n_b)$
 Using $x$ to represent mole fractions, where $x_i=n_i/n$:
 $\Delta S=-nk_B (x_a\ln(x_a)+x_b\ln(x_b))$
 
-No we can see than the entropy of mixing is extensive in the limit of large systems (the thermodynamic limit), proportional to n and a function of the composition of the material. 
+Now we can see than the entropy of mixing is extensive in the limit of large systems (the thermodynamic limit), proportional to n and a function of the composition of the material. 
 
 It is also necessarily positive, creating many more configurations the system can explore
+
+Max entropy increase occurs when mixed in proportion, 50-50.
 
 **Ideal Gases**
 
@@ -70,7 +73,8 @@ The internal energy U of an ideal gas only involves the kinetic energy of the mo
 $U=\sum \frac{1}{2}m_iv_v^2$ + rotational kinetic energy
 $\Rightarrow U=U(T)$
 
-For a reversible transformation of an ideal piston at constant temperature: $TdS=pdV$
+For a reversible transformation of an ideal piston at constant temperature: $TdS=dU + pdV$
+Because the gas is ideal, we know that a change in volume $dV$ alone would not change the internal energy, hence: $TdS=pdV$
 
 In an ideal gas, because the particles do not interact with each other, the way to distribute the velocities is independent of the way to distribute positions.
 $\Omega = \Omega_v \times \Omega_c$, the possible ways to distribute velocities and the possible ways to distribute positions repectively
@@ -90,6 +94,7 @@ $\Omega_c = K V^n$
 Combining all so far: $\frac{p}{T}= \frac{\partial S}{\partial V}=\frac{k_Bn}{V}$
 $\Rightarrow pV=nk_BT \Rightarrow pV=NRT$
 
+$N$ moles of gas, $N=n/N_A$
 $R=N_A k_B$
 
 This shows that the pressure of gas in the ideal limit is purely entropic (the statistic drive to spread out as much as possible, electrostatic/ energetic effects ignored), which is why all gases tend to behave the same at low density.
