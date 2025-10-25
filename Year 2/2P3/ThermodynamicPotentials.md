@@ -81,3 +81,47 @@ We can draw similar G-x graphs for energy given temperature from the phase diagr
 ![[Pasted image 20251018115236.png]]
 For example, the bottom right graph shows why phase separation occurs, having the separation of two minima on the G curves
 
+**Nucleation**
+
+The interface between two phases, say solid and liquid, is a much higher energy state. This means there is such thing as a surface energy, $\gamma$. As we increase the nucleated region, the surface energy increases
+
+Therefore there are two energies summing when the radius of a solid nucleating region is increasing. The bulk free energy and the interfacial energy.
+
+$G(r)=\frac{4}{3}\pi r^3 \Delta G_v+4\pi r^2 \gamma$
+
+$\Delta G_v$ is negative, it is the driving energy, the Gibbs free energy of solidification per unit volume
+
+![[Pasted image 20251020195254.png]]
+These energies combine, meaning there is actually an energetic barrier at $r^*$
+By statistical distribution, regions of atoms will have enough energy to overcome it initially
+
+If we compute $\frac{dG}{dr}(r^*)=0\Rightarrow r^*=\frac{2\gamma}{\Delta G_v}$
+The larger the $r^*$ the more difficult it will be to nucleate the solid
+
+By consider $\Delta G(T_m)$ we can get to the result that $\Delta G(T)$, the change in gibbs free energy in order to solidify, is given by $\Delta H \cdot (\frac{T_m - T}{T_m})$
+Also, $r^*=\frac{2\gamma}{\Delta H_v}\frac{T_m}{T_m-T}$, both proportional to the amount of undercooling
+
+This is a flawed model, as we see that as T tends to $T_m$, $r^*$ tends to infinity, which we don't observe in reality
+This is also assuming homogeneous nucleation, that is the spherical crystal suspended in the liquid nucleates
+
+In reality, most often we get heterogeneous nucleation, where the solid nucleates off of defects/dirt/grit floating in the liquid, which actually looks like this:
+
+![[Pasted image 20251020200139.png]]
+
+We can write the Gibbs free energy of the system as:
+$G = V_S(r)\Delta G_v + A_{SL}(r)\gamma_{SL} + A_{CS}(r)(\gamma_{CS} - \gamma_{CL})$
+Where $A_{SL}$ is the area of the solid liquid interface, and $(\gamma_{CS} - \gamma_{CL})$ is the change in surface energy as the solid - catalyst interface increases
+
+Balancing forces, we must have that: $\gamma_{CL}=\gamma_{CS}+\gamma_{SL}\cos(\theta)$
+
+If we carry through with the algebra, we get the same answer for $r^*$. The difference here is that for the same $r^*$ we have far fewer atoms required to lump together
+
+**Osmosis**
+
+Solvent flows through a semi permeable membrane until the distribution of solute is even, maximising entropy and minimising Gibbs free energy
+
+We find that $\pi = RTc$, where $\pi$ is the osmotic pressure and c is the solute concentration expressed in moles per $m^3$
+We find this by considering the equilibrium point where $\frac{\partial G}{\partial n_1} = 0$, where $n_1$ is the number of water molecules on one side of the membrane
+
+This is used in plant cells, where intaking more water makes the cell more rigid
+This also causes a depletion force between particles in suspension, squeezing them together. This tends to clump and aggregate larger particles, meaning filtering is easier
