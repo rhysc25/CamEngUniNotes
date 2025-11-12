@@ -102,6 +102,39 @@ This extra term is included in the data book expression
 When a vector field is governed by a scalar potential, and is also solenoidal, it follows that: $\nabla \cdot (\nabla \phi)=0$
 We can write this as $\nabla^2\phi$ where $\nabla^2$ is the Laplacian, given by $\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}$
 
+**Curl of a Vector Field**
+
+Curl $\textbf{V}$: $\nabla \times \textbf{V}$
+This acts on a vector field and gives a vector field
+
+$\nabla \times \textbf{V}=\textbf{i}(\frac{\partial V_z}{\partial y}-\frac{\partial V_y}{\partial z})+\textbf{j}(\frac{\partial Vx}{\partial z}-\frac{\partial V_z}{\partial x})+\textbf{k}(\frac{\partial V_y}{\partial x}-\frac{\partial V_x}{\partial y})$
+This can be found from the determinant method of finding the vector product
+
+The direction of $\nabla \times \textbf{V}$ can be at any angle to $\textbf{V}$
+
+For all 2D vector fields, the curl field is normal to the plane of the original field. It represents how much the field is rotating.
+
+Identities can be found in the data book, once again proven by breaking into cartesian components. Most importantly:
+$\nabla \cdot (\nabla \times \textbf{A})=0$. This shows that the divergence of the curl field is 0. Therefore all curl fields are solenoidal
+$\nabla \times (\nabla \phi)=0$. This shows that the curl of any vector field formed from a scalar potential = 0
+
+$(\textbf{B}\cdot \nabla)$ is a scalar operator, which acts on a vector and gives a vector with 9 terms
+
+The curl in different coordinate systems is given in the data book
+
+The angular velocity of a line element depends on theta. This is because it deforms as well as rotates. Because of this, we need to find the instantaneous mean angular velocity by integrating over theta and dividing by $2\pi$
+
+The curl vector points in the direction of the axis of rotation of the fluid particle. In fluid mechanics, it is called vorticity.
+The local magnitude of the curl of the velocity field is equal to twice the instantaneous mean angular velocity of a fluid particle at that point. 
+
+Since all curl fields are solenoidal, then there can be no sources or sinks of vorticity within the fluid flow field
+
+A vector field which has $\nabla \times \textbf{V}=0$ everywhere is called an irrotational field
+
+If $\textbf{V}=\nabla \phi$, then $\nabla \times \textbf{V}=0$ and $\textbf{V}$ is irrotational
+Conversely, if $\textbf{V}$ is irrotational, we can find a scalar potential $\phi$ such that $\textbf{V}=\nabla \phi$ 
+This is the test to see if a scalar potential exists
+
 
 
 

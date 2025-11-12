@@ -46,3 +46,45 @@ We can find out whether a process follows this law by plotting $\ln(rate)$ again
 
 The coefficient of diffusion in solids follows the Arrhenius law:
 $D=D_0 \exp(-\frac{Q}{RT})$
+
+It is also possible to get net flow as a result of a thermodynamic driving force which biases the probabilities to go over an energy barrier. E.g. change of  free energy due to a phase transformation
+
+Consider the growth rate of a solid-liquid interface for $T<T_m$
+The variation of free energy per atom is $\pm \Delta G$
+![[Pasted image 20251030111317.png]]
+
+The rate of transformation from liquid to solid is $p_{LS}=\exp{(-\frac{q-\Delta G/2}{k_BT}})$, and from solid to liquid is $p_{SL}=\exp{(-\frac{q+\Delta G/2}{k_BT}})$
+The growth rate of the solid phase will be proportional to $p_{LS}-p_{SL}$, so proportional to $(\frac{T_m-T}{T})\exp{(\frac{-q}{k_BT})}$, after replacing $\Delta G$ for the expression in terms of H
+
+This depends on temperature in two opposing ways, one way increases the energy barrier, and the other increases the probability that the particle has energy above that energy barrier. This gives an optimum temperature
+
+**Nucleation**
+
+Nucleation is another example of activated process. 
+At a quantitative level, nucleation requires:
+* Some small scale fluctuations to get atoms to move around
+* The fluctuations of energy of the other $\Delta G^*$ bringing together a nucleus of size $r^*$
+Therefore rate is expected to vary with temperature like: $\exp{(-\frac{\Delta G^*}{k_b T})}\exp{(-\frac{q}{k_BT})}$
+There is a trade off between having enough energy for atoms to move about vs how large the energy barrier is, whether that be $\Delta G^*$ or $q$
+
+We can apply this knowledge of diffusion to silicon doping, is that the dopant diffuses into the material. 2 stages:
+* Pre-deposition: Sets the amount of dopant
+* Drive-in: Spreads the dopant across the material
+
+The drive in stage occurs just as normal diffusion, with the area of the curve (amount of dopant) remaining constant, but the depth spreading out like $\sqrt{Dt}$
+
+Considering now the pre-deposition phase, which sets the amount of dopant available to drive in:
+These diffusion depths are much much smaller than that of the drive-in stage
+![[Pasted image 20251030112647.png]]
+During a time t, the typical distance travelled is $\sqrt{Dt}$
+Therefore we can expect the amount pre-deposited to be of the order of $C_s\sqrt{Dt}$
+
+Numerically: As we can say that the concentration of an element at the next time step depends on the concentration of its neighbours at the current time step: $c_{i,n+1}=\frac{1}{2}(c_{i-1,n}+c_{i+1,n})$
+The exact solution is $C_s(1-erf{(\frac{x}{2\sqrt{Dt}})})$
+Where the error function is the integral under the normal curve
+If we integrate this expression with respect to x, we get that $N(t)=\frac{2C_s\sqrt{Dt}}{\sqrt{\pi}}$
+
+Therefore the amount of introduced material grows like $\sqrt{t}$, very typical of a diffusion process
+
+
+

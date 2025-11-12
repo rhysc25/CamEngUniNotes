@@ -7,3 +7,158 @@ $G=\frac{v_0}{v_1}=\frac{A}{1+AB}$
 If A is large, as is often the case with OpAmp circuits, then gain $\approx \frac{1}{B}$
 This means that the gain is determined purely by the feedback network and not loosely specified on the parameters of the amplifier itself
 
+**Gain Stability**
+By considering $\delta G=\frac{dG}{dA}\delta A$ where A is open loop gain and G is closed loop gain, that:
+$\frac{\delta G}{G}=\frac{\delta A}{A}(\frac{1}{1+AB})$
+Therefore it is more robust against variations in A. The fractional change in gain is reduced by a factor of $1+AB$. This is for when we make many copies of components/circuits, not when we use a singular one
+
+**Bandwidth**
+The frequency-dependant gain $A(f)$ can be expressed as:
+$A(f)=$ (low freq cut off) $\times A_0 \times$ (high freq cut off)
+$A(f)=(\frac{1}{1+\frac{f_1}{jf}})A_0(\frac{1}{1+\frac{jf}{f_2}})$
+Where $f_1$ is the low frequency cut off and $f_2$ is the high frequency cut off
+The low frequency cut off it caused by coupling capacitors to stop DC affecting further circuits, and the high frequency cut off is caused by parasitic capacitance, like from the Miller affect
+
+With feedback we can say that $G(f)=\frac{A(f)}{1+A(f)B}$
+Subbing in $A(f)$ and considering when f is large and small, we can see that the gain is decreased by a factor of $(1+A_0B)$, but also the upper frequency cut off frequency is increased by that same factor and the lower frequency cut off frequency is decreased by that same factor
+
+You sacrifice gain for greater bandwidth
+
+For any given circuit, the product of gain and bandwidth stays constant
+
+**Input and Output Impedance**
+Considering this simple amplifier with feedback:
+![[Pasted image 20251026121025.png]]
+After finding the new input resistance, it can be found that $R_{in}=R_i(1+AB)$
+Also, if we short the input and find the output impedance, we see that it has decreased by the same factor
+
+To summarise, negative feedback:
+* Reduces gain by $(1+AB)$
+* Increased input resistance by $(1+AB)$
+* Decreased output resistance by $(1+AB)$
+* Increased upper 3dB freq by $(1+AB)$
+* Decreased lower 3dB freq by $(1+AB)$
+* Reduces the effect of a change in open loop gain by $(1+AB)$
+* Reduces distortion by $(1+AB)$
+
+However, for current amplifiers the effect of negative feedback is to decrease the input resistance and increase the output resistance
+
+**Non ideal OpAmps**
+![[Pasted image 20251030192531.png]]
+$V_o=A(v_+ - v_-)$
+
+Make sure any resistors you connect are nowhere near $R_i$ or $R_o$ as this will cause an unexpectedly large voltage drop across the internal resistances
+
+For an inverting amplifier, if you tried just connecting the plus to minus and minus to plus you would get nothing
+
+Sources of non-ideality:
+Small base/bias currents flow into the inputs. These are not perfectly symmetry, therefore there is a difference in voltage drop inside.
+This causes a voltage at the output, even with no inputs. To stop this we can connect a variable resistor between offset null pins. Or we can have a variable resistor at one of the inputs to balance offset.
+
+FET inputs normally have a larger $V_{os}$, the input offset voltage
+
+**Freq Response**
+The gain of an operational amplifier falls with the frequency because of stray capacitance. This can be modelled as a low pass filter, giving a 20dB roll off.
+
+The actual gain of a non ideal op amp is not that hard to find, just nodal analysis will get you there
+
+**Practical Uses of OpAmps**
+1) Buffer - used for power matching
+2) Adder
+3) Difference amplifier
+4) Differentiator
+5) Integrator
+6) Transimpedance amplifier
+7) Gyrator
+
+Adder -
+If we have several inputs to the inverting input of an opamp:
+![[Pasted image 20251031170208.png]]
+We can say that $v_0=-[\frac{R_f}{R_1}v_1+\frac{R_f}{R_2}v_2+...]$
+
+Difference Amplifier -
+Cuts out noise due to thermal fluctuations
+![[Pasted image 20251031170352.png]]
+If $R_1=R_2$ and $R_3=R_4$ then $v_0=\frac{R_3}{R_1}(v_2-v_1)$
+Problems: The input resistance is very low. This can be increased by placing buffers at each of the inputs. The CMRR is limited by the matching of resistors, as they can have up to 5% errors
+Gain for a difference amplifier is $\frac{v_0}{v_2-v_1}$
+
+Integrator - 
+If a constant input is applied, $v_{out}$ will increase linearly until it hits the value of the supply rail. The rate of increase is determined by the time constant and is called the slew rate
+A differentiator can be formed by exchanging the resistor and capacitor.
+
+It is also a type of low pass filter when AC is used. 1st order filters are made of a capacitor and resistor. 2nd order filters like the Chebyshev filter have two of each. It increased the roll-off from 20 to 40dB/decade
+
+Transimpedance Amplifier -
+Can be used to measure small currents. We want large R but if we make it too high, the parasitic C reduces high frequency response. Lowers bandwidth
+
+Gyrator - 
+Mimics an inductor. If we find the input resistance of this circuit:
+![[Pasted image 20251031171304.png]]
+We get that $Z=\frac{R_L+j\omega CRR_L}{1+j\omega CR_L}$
+If R is large this is essentially $Z=j\omega C RR_L$,
+mimicking an inductor with $L=CRR_L$
+
+**Power Amplifier and Oscillators**
+
+Considering this bipolar transistor circuit with a resistive load $R_L$:
+![[Pasted image 20251103141728.png]]
+Through the load, there is an AC $i_0$ superimposed with $I_{C0}$. The small signal $v_1$ modulates $I_{C0}$ by an amount $i_0$
+This leads to an output $i_0R_L$
+
+The efficiency = Power dissipated in the load (AC) / Power drawn from the power supply (DC)
+
+If we set $V_{CE}=\frac{V_{CC}}{2}$, which is a sensible design decision, then the max $v_0$ is $\frac{V_{CC}}{2}$ and $I_{C0}=\frac{V_{CC}}{2R_L}$
+
+The time averaged power is the RMS voltage X the RMS current
+$P=\frac{v_o}{\sqrt{2}}\frac{i}{\sqrt{2}}=\frac{v_0^2}{2R_L}$
+Therefore efficiency = $\frac{\frac{v_0^2}{2R_l}}{V_{CC}I_{C0}}=\frac{v_0^2}{V_{CC}^2}$
+This equals 0.25 for maximum $v_0$ swing
+
+**The Complementary Source or Emitter Follower**
+![[Pasted image 20251103145139.png]]
+This is complementary as utilises both npn and pnp transistor
+T1 needs greater than 0.7V to turn on, and T2 needs less than -0.7V. Only one is on at a time, making it a class B amplifier.
+
+When analysing the circuit, you only need to analyse half of it, as only one transistor is on at any given time.
+
+Efficiency -
+Power dissipated in the load: $\frac{v_0^2}{2R_L}$
+Power drawn by one of the supplies: $P_{supply}=\frac{1}{T}\int_0^{T/2}V_{CC}I_Cdt$ where $I_C=v_0/R_L$
+We are integrating the instantaneous power over a period. We ignore the second half of the period as one transistor will be off, so the power drawn from that supply will be zero
+
+If we assume $v_0$ is sinusoidal, and carry out the integral, we get $\eta=\frac{\pi}{4}\frac{v_0}{V_{CC}}$, approximately $78\%$
+
+It will have an output characteristic of the form:
+![[Pasted image 20251103164932.png]]
+With saturation occurring at both $+V_{CC}$ and $-V_{CC}$
+As we can see, this dead band will cause cross-over distortion. Any sinusoid you put in will be of smaller amplitude than you expect.
+Also, it may lead to high order harmonics.
+
+A solution would be to bias the bases of the transistors, so they start at $+0.7V$ and $-0.7V$ respectively. This can be done through the use of a current source and a diode, made of the same semiconducting material, so that it has the exact same voltage drop across it.
+![[Pasted image 20251103165321.png]]
+This leads to regions where both transistors are conducting, but only about 10mV on either side. Therefore we call this class AB operation
+
+**How To Generate a Sinusoid of Specific Frequency**
+One way of achieving this is to use a feedback network with a frequency dependent response, combined with a linear amplifier.
+
+So far, it has been assumed that the feedback that is applied in circuits is negative, that it is anti-phase to the output.
+However it is possible for the feedback to become positive, i.e. in phase with the input.
+
+As $G=\frac{A}{1+AB}$, if AB = -1, then the gain becomes infinite, and oscillations occur.
+
+Consider this positive feedback circuit:
+![[Pasted image 20251103171057.png]]
+For stable oscillation, it is required that $v_3=v_1$. For this to be true,  AB = 1.
+We also need the phase shift to be 0
+Conditions:
+$\angle AB(j\omega)=0/2\pi\qquad|AB(j\omega)|=1$
+
+If we consider a B of $B(j\omega)-\frac{1}{3+j(\omega RC - 1/(\omega RC))}$, then we can see that $\omega RC$ must equal $\frac{1}{\omega RC}$
+for the phase to be 0
+This means that B is 1/3, so A must be 3 
+
+It will output a sinusoid at the exact frequency that causes a phase shift of 0.
+If less, the feedback becomes insignificant
+If more, the phase will cause it to cancel with itself
+
