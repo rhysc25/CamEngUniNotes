@@ -45,4 +45,7 @@ Torsional stiffness is often denoted as GJ where J is the torsion constant.
 $T=(GJ)\phi$, very similar to $M=EI\kappa$
 We can see that to maximise relative stiffness we need to maximise enclosed area, which makes a circular section optimal.
 
+$\oint \frac{ds}{t}$ is easy to calculate if the section is made from solid, constant thickness beams. It is simply the sum of the lengths over their thicknesses
+
+The polar second moment of area, $J=\int r^2 dA$
 

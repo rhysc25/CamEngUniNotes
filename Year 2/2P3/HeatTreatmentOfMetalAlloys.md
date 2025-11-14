@@ -137,4 +137,67 @@ If we don't want to quench for very long as our component is delicate. Don't wan
 When do we want a low hardenability -
 When you don't want to form martensite. Welding. Forming martensite is undesirable as it is brittle. High hardenability = poor weldability.
 
+Increasing carbon concentration increases the hardenability by delaying the diffusional phase trasnformations
+For the same reason, hardenability is also increases when we further alloy, adding up to 5% of various alloying elements (Ni,Cr,Mo,V,W), making it a low alloy steel
+
+**High Alloy Steels**
+Largely used for cutting tools, which also need to operate at high temperatures. In plain C steel, the $Fe_3C$ ppts may coarsen, leading to softening
+High alloy steels are the solution, increasing the hardenability further, and also forming alloy carbides ($MO_2C$, $W_2C$, ...) which retain precipitation hardening in service. They also contribute to high temperature solid solution hardening
+
+**Modelling Thermal History**
+There are direct parallels between the diffusion of atoms and the conduction of heat
+
+The equivalent to Fick's first law is Fourier's law: $q=-\lambda \frac{\partial T}{\partial x}$
+Where q is the heat flux ($Wm^{-2}$)
+The heat flux depends on the temperature gradient and the thermal conductivity
+By equation the net flow of energy in to a region to the mass times the specific heat capacity times the change in temp, we can find another law for conduction:
+
+$\frac{\partial T}{\partial t}=-\frac{1}{\rho c}\frac{\partial q}{\partial x}=\frac{\lambda}{\rho c}\frac{\partial^2 T}{\partial x^2}$
+We call $\frac{\lambda}{\rho c}=a=$ thermal diffusivity
+
+There are three distinct solutions to this equation that we can consider:
+1) The impulse response: Normal/ Gaussian distribution
+This grows with spread $\sqrt{Dt}$
+2) The step response: Error function (erf) distribution
+C tends to a step function of amplitude $C_1$ as $t \rightarrow 0$ and tends to zero as $t \rightarrow \infty$
+The width of the step is of the order $\sqrt{Dt}$
+This solution can be re-scaled and shifted to match the specific boundary conditions
+3) With initial conditions being a sine wave
+$C(x,t=0)=C_1 \sin(\frac{2\pi x}{w})$
+To solve this, take a trial function being a sin wave but with varying amplitude
+$C(x,t=0)=C_1 f(t) \sin(\frac{2\pi x}{w})$
+Subbing into Fick's second law:
+$\frac{df}{dt}+D(\frac{2\pi}{w})^2 f=0$, giving the solution $f(t)=\exp{-\frac{t}{\tau}}$ where $\tau=\frac{w^2}{4\pi^2 D}$
+This gives us our solution which we can shift or scale as required given the boundary conditions
+
+If we have a plate with thickness $L$, the solution follows the error function solution provided that $L>>\sqrt{at}$
+We can use this to calculate the cooling rates in the plate. From the materials data book:
+$\frac{d}{dZ}[erf(Z)]=\frac{2}{\sqrt{\pi}}\exp{-Z^2}$ where $Z=x/2\sqrt{at}$
+This shows that martensite is overwhelmingly likely to form near the surface if subjected to a lower temp for a short period of time. The distribution becomes more even as t increases.
+
+Alternatively, we have a plate of finite thickness L where $L\approx \sqrt{at}$
+![[Pasted image 20251113140240.png]]
+We can model this as the solution to a square wave input, just considering half of the period.
+This can be broken down using Fourier series into sine wave components, or modes.
+Each mode has a amplitude multiplier: $f_n(t)=\exp{-\frac{t}{\tau_n}}$ where $\tau_n=\frac{L^2}{n^2 \pi^2 a}$ where n is the mode number
+
+For each mode the time constant is dependant on $L^2/a$ so reducing thickness will significantly increase cooling rate
+Higher modes have larger time constants so will decay fastest, so we will mostly just be left with the first sinusoidal component
+
+**Surface Hardening**
+Many steel components are subject to high surface stresses. Surface engineering is used to harden the surface of the component (case-hardening) to increase its hardness and wear resistance without damaging the strength and toughness of the underlying steel
+Methods:
+1) Carburising: immerse the steel at high temperatures in a carbon-rich atmosphere. The diffusion will increase the C content at the surface which increases the hardenability and also makes the formed martensite harder due to the greater saturation with carbon
+2) Transformation hardening: Heat up a thin layer at the surface then stop with quenching, causing martensite formation at the surface
+
+Using the diffusion analysis to model carburising:
+The solution is a shifted and scaled error function
+![[Pasted image 20251113141302.png]]
+It is normally important to specify a minimum concentration $C_{min}$ at a specified depth into the material: the case depth $x_{case}$
+Subbing into the solution gives that $erf(\frac{x_{case}}{2\sqrt{Dt_{case}}})=1-\frac{C_{min}-C_0}{C_s-C_0}$
+
+$C_0$ is easy to find, it is just the concentration of the steel we are using
+Assuming a carbon rich environment, $C_s$ will be the maximum amount of carbon that can be accommodated in solid solution at the carburising temperature. This is set be the solubility limit of the steel at the carburising temperature, from the phase diagram.
+
+Tables in the materials data book give values of erf(Y) against Y so we can evaluate Y and hence $t_{case}$
 
