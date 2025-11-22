@@ -34,7 +34,7 @@ $\int_a^b \delta(t-c)f(t)dt = f(c)\int_a^b \delta(t-c)dt=f(c)$, provided $a < c$
 If we have a linear differential equation: $a\frac{dy}{dt}+by=f(t)$, then $f(t)$ is the input and $y(t)$ is the output.
 If we replace $f(t)$ with $\delta(t)$ then $y(t)$ is the impulse response. However it is usually easier to set $f(t)$ to the step function, so that $y(t)$ is the step response, then differentiate the impulse response.
 
-Considering boundary conditions: We know for a first order differential equation that $y(t)$ must equal 0 at $t=0$, or else there would be a jump, so $\frac{dy}{dt}=\infty$, the equation cannot be satisfied. With the same logic, for a second order differential equation, both $\dot{y}(t)$ and $y(t)$ must equal 0 at $y=t$.
+Considering boundary conditions: We know for a first order differential equation that $y(t)$ must equal 0 at $t=0$, or else there would be a jump, so $\frac{dy}{dt}=\infty$, the equation cannot be satisfied. With the same logic, for a second order differential equation, both $\dot{y}(t)$ and $y(t)$ must equal 0 at $y=0$.
 
 Suppose out input is composed of lots of delta functions: $f(t)=\sum p_n \delta(t-q_n)$, then the corresponding output will be $y(t)=\sum p_ng(t-q_n)$
 

@@ -1,0 +1,104 @@
+**Casting**
+Reason for opting for a casting route:
+1) Metal alloying - It is only practical to fix the composition in the liquid state (high solubility, rapid diffusion)
+2) Complex shapes can be made at low costs
+Solidification results in a polycrystalline structure. Nucleations grow until they impinge upon each other.
+The rate of solidification depends on the undercooling as discussed before.
+Heterogeneous nucleation requires a lower undercooling than homogeneous. Both have the same equation, but you can form a feature with a larger radius with the same number of atoms when heterogeneous nucleation occurs.
+
+When casting happens, we get three regions in the microstructure.
+![[Pasted image 20251117122300.png]]
+The chill zone occurs as there is a large amount of undercooling, causing rapid nucleations, and many small nuclei forming.
+The columnar zone occurs as temperature falls into the material, so the undercooling is insufficient for nuclei to form, we can only grow off others.
+The equiaxed zone occurs when we have cooled so much that only random sparse homogeneous nucleations occur, with no preferred orientation.
+
+**Grain Boundary Hardening**
+Grain boundaries act as obstacles to dislocations.
+The yield strength increases as grain size decreases: $\sigma_y=A+\frac{B}{\sqrt{d}}$
+Fine-grained castings can be achieved by increasing the number of nuclei that form throughout the casting. A practical strategy for achieving this is to use inoculants:
+* A dispersion of fine solid particles, added to the melt just before pouring into the mould
+* These provide sites for heterogeneous nucleation
+
+**Casting Alloys**
+Alloying to the right level improves castability. If we add a concentration around the eutectic point, we lower the melting temperature, so reduce costs. We also reduce the freezing range, which is the size of the two phase region. This reduces the viscosity and allows the liquid to flow more easily.
+
+Mechanical properties of Al-Si casting alloys:
+Two-phase eutectic microstructure, (Al) with Si needles. Higher strength than pure Al, but very brittle.
+Commercial casting alloys often have their properties improved by heat treatment or further alloying
+
+For near eutectic cast irons:
+The microstructure is multi-phase: Ferrite and/or pearlite and graphite. This is a metastable combination of phases, and is very brittle due to the graphite flakes
+These graphite flakes behave like sharp cracks.
+To stop this, we add a small alloying addition of Mg which interferes with the formation of graphite flakes, becoming more like round nodules, reducing the stress intensity.
+
+**Segregation: Concentration Gradient in Cast Alloys**
+As the solidus line moves down and to the right, the first solid to form forms at a starting low concentration, and stays at that concentration, due to how slow diffusion is. As the radius increases, the concentration increases, leading to a concentration gradient.
+
+This is known as segregation. This leads to concentration gradients across two length scales: Micro-segregation: Across a grain, from the centre to the boundary. Macro-segregation: Across a whole casting, from the mould to the centre.
+A similar process also leads to a non-uniform distribution of impurities.
+Consequences of segregation:
+1) Non-uniform distribution leads to a variation in yield strength
+2) The impurities build up on the grain boundaries
+Solutions:
+Reduce the grain size of the casting using inoculants. Add a small alloying addition which reacts with impurities, forming a fine dispersion of solid particles. Homogenise the casting: heat it up to enable the redistribution of the solute by diffusion.
+
+We can model homogenisation by assuming diffusion occurs in 1D, all grains have the same size, and the initial solute concentration is a sinusoidal function of x, with average $C_0$ and peak $C_1$
+Homogenisation will be considered complete once the amplitude of concentration fluctuations drops below a specified level. The time constant governing the rate of decay of the amplitude: $\tau=\frac{d^2}{4\pi^2 D}$
+We can see that is is dependant on both the grain size and the temperature
+
+**Deformation Processing**
+Wrought alloys are ones shaped by deformation processes.
+They must be ductile, as they go through a lot of plastic strain.
+Deformation processes are mainly done in compression to avoid necking and tensile failure.
+
+Types: Forging, rolling, extrusion, sheet metal forming
+Advantages of deformation over casting:
+1) Improved mechanical properties. When casting, we have to choose alloys close to their eutectic composition, which makes them brittle
+2) Lower temperatures. Lower energy consumption. Lower temperatures is also better for surface finish and dimensional accuracy
+
+**Cold Working**
+Deform at room temp. 
+Microstructural changes:
+* Grains change shape. During plastic deformation volume is conserved. So when rolling, their is elongation in the longitudinal direction. The grains go from equiaxed to pancaked grains, aligned with the rolling direction. The slightly softer direction aligns with the compression direction. This causes uneven properties.
+![[Pasted image 20251120135016.png]]
+* Work hardening occurs. When there is plastic strain, the dislocation density increases. As $\rho_d$ increases, the spacing between dislocations, s, reduces.
+Assuming all dislocations are all parallel and equally spaced. If the spacing between dislocations is s, $\rho_d=1/s^2$, so $s=\frac{1}{\sqrt{\rho_d}}$
+Dislocations pin each other. The shear stress required to overcome obstacles is inversely proportional to the obstacle spacing, s
+So the yield strength increases as $\rho_d$ increases: $\sigma_y \propto 1/s = \sqrt{\rho_d}$
+
+A useful and realistic model for the work hardening stress-strain curve for metals is given by the power law relationship: $\sigma=a\epsilon^n$
+This works well for large strains, but not for small strains
+
+Problems with work hardening: As deformation progresses, the applied force must increase, and we may break the machinery. Ductility reduces, so we increase risk of fracture. To stop these, we must anneal the material
+
+**Annealing**
+Reverses the effects of work hardening - heat treatment. Hold at a good proportion of the materials melting temperature. 
+
+The driving force for the microstructural changes that take place during annealing is the elastic stored energy within the material that results from the increased dislocation density during cold working. During plastic deformation, the work done is given by the area under the stress-strain curve.
+![[Pasted image 20251120135930.png]]
+Of the plastic work done (energy not recovered on fracture): 95% dissipated as heat, 5% remains stored in the material in dislocations
+
+Dislocations induce elastic strain in the lattice around them, which can be expressed as a line energy per unit length. Annealing is freeing this energy. During annealing, two microstructural changes occur:
+
+1) Recovery
+Dislocations rearrange into a pattern that reduces the strain in the crystal lattice around them. Dislocations of opposite orientation can annihilate each other. Or dislocations of similar orientations can align and form sub grains.
+Only small temperatures are needed, and this only causes a small drop in $\sigma_y$
+2) Recrystallisation
+We can instead have new nucleations which grow new crystals within the work hardened grains. This requires much more diffusion, so we need higher temperatures and more time. This resets the microstructure to how it was before rolling. This is not a phase change.
+
+When to anneal?
+The final yield stress exists within a specified region. High enough to do the job it was made for, but low enough not to break the machinery. 
+After each pass through rollers, the yield stress increases. Every few rolls we must anneal it therefore. These annealings must be timed, so as to give the final metal the right thickness and right strength.
+Using true strain, which is additive, we can say $\epsilon_t=\ln(\frac{t_N}{t_0})$
+The magnitude of stress can be found from the power law: $\sigma=a|\epsilon|^n$
+
+Using recrystallisation to control grain size -
+We can vary the driving force $\Delta G$ for the nucleation of new grains, the dislocation strain energy, using prior strain
+![[Pasted image 20251120141215.png]]
+
+If the material is held at high temperatures after recrystallisation has completed, grain growth will occur, a coarsening process.
+Grain boundaries, as discontinuities in the crystal structure, carry an energy penalty. If atoms are able to continue to rearrange by diffusion, the grain size will tend to increase, thus reducing the surface area to volume ratio of the grains.
+A larger grain size, d, reduces the grain boundary hardening: $\sigma_y=A+B/\sqrt{d}$
+
+**Hot Working**
+Hot working combines deformation and annealing. It keeps yield strength low, so we can deform more each pass. Lower tool forces required. Obviously this has the downside of requiring much more energy.

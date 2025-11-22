@@ -54,7 +54,48 @@ For steady variable density flow, this would mean that $\nabla \cdot (\rho V)=0$
 
 Can result in a scalar or vector. Example: $\iiint_{vol} \rho dv=$ the mass of a fluid with density $\rho$ occupying volume vol
 
+**Gauss's Divergence Theorem**
 
+The volume integral of $\nabla \cdot \textbf{V}$ over the volume vol is equal to the net flux of $\textbf{V}$ through the surface S enclosing vol
+$$\iiint_{vol}(\nabla \cdot \textbf{V})dv=\iint_{s,closed} \textbf{V}\cdot d\textbf{A}$$
+We can use Gauss' theorem to transform a surface integral over a closed surface, into a volume integral over the enclosed volume, and vice-versa.
 
+From Gauss' theorem:
+If $\textbf{V}$ is a solenoidal field, $\nabla \cdot \textbf{V}=0$ everywhere, then $\iint_{s,closed}\textbf{V}\cdot d\textbf{A}=0$: The net efflux of $\textbf{V}$from any finite volume is zero.    
 
+Considering conservation of mass:
+The rate of increase of mass in a control volume = - net efflux of mass from the control volume
+$\frac{\partial}{\partial t}(\iiint_{vol}\rho dv)=\iiint_{vol}\frac{\partial \rho}{\partial t} dv=-\iint_{closed}\rho \textbf{v}\cdot d\textbf{A}$
+Rewriting the right hand side with Gauss' theorem we get that:
+$\iiint_{vol}(\frac{\partial \rho}{\partial t}+\nabla \cdot (\rho \textbf{V}))dv=0$
+If we shrink the volume down to zero, just at a point, we get the differential expression:
+$\frac{\partial \rho}{\partial t}+\nabla \cdot (\rho \textbf{V}) = 0$
 
+Gauss's divergence theorem can be used to provide a coordinate-free definition of the divergence,
+$$\nabla \cdot \textbf{V}=\lim_{\delta v \rightarrow 0} \frac{1}{\delta v}\iint_{closed}\textbf{V}\cdot d\textbf{A}$$
+This is a compact definition of divergence which is valid for any coordinate system
+
+**Stokes's Theorem**
+
+The circulation of the vector field $\textbf{V}$ around the closed curve L is equal to the flux of $\nabla \times \textbf{V}$ passing through any surface S that spans the curve L.
+
+If S is an open two-sided surface bounded by a closed non-intersecting curve L, and if the vector field $\textbf{V}$ has continuous derivatives, then:
+$$\oint_L \textbf{V} \cdot d\textbf{r}=\iint_S(\nabla \times \textbf{V})\cdot d\textbf{A}$$
+The direction of integration for the line integral must be chosen such that a right handed screw would advance in the positive direction of the $\delta \textbf{A}$ vector.
+
+There are an infinite number of possible surfaces that would span the same closed curve, and the flux of $\nabla \times \textbf{V}$ through each of them must be the same. This implies that there are no sources or sinks of $\nabla \times \textbf{V}$. All curl fields are solenoidal.
+
+Stokes's theorem converts a line integral to a surface integral.
+
+The coordinate free definition of curl, using Stokes's theorem:
+$(\nabla \times \textbf{V})\cdot \delta \textbf{A}=\oint_L \textbf{V} \cdot d\textbf{r}$
+
+Summary:
+If a vector field is conservative:
+* $\oint_C \textbf{V} \cdot d\textbf{r}=0$ for any closed curve, C
+* $\textbf{V}$ is also irrotational ($\nabla \times \textbf{V}=0$)
+* A scalar potential exists
+If a vector field is solenoidal:
+* $\nabla \cdot \textbf{V}=0$
+* $\iint_{closed S}\textbf{V}\cdot d\textbf{A}=0$
+* A vector potential exists such that $\textbf{V}=\nabla\times \textbf{C}$

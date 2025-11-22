@@ -22,4 +22,61 @@ With a bit of double angle manipulation, we get that:
 ![[Pasted image 20251112141906.png]]
 We can clearly see the rotational matrix appearing and causing the circle nature
 
+Once we've found the radius of the circle, we can simply do $R\cos(2\theta)$ to get the normal stress.
+
+In reality, we should be consider a 3D cube, with $\sigma_l$, $\sigma_h$ and $\sigma_t$, where $\sigma_t$ is zero.
+We must draw the actual Mohr's diagram, considering 3 circles with the min/max being 2 of the 3 $\sigma_l, \sigma_h$ or $\sigma_t$
+The maximum shear stress is found by rotating around the longitudinal axis by $45\degree$
+
+Note: Only use Mohr's circle to rotate around principle axes, if you try anything else you will lose track of shears on the faces.
+Instead we could use a stress tensor.
+
+![[Pasted image 20251119140820.png]]
+In terms of strains, it is clear that a shear strain in one direction is the same as a normal strain in another.
+
+It turns out there is a perfect correspondence between the stress and strain equations when we change the angle of an element.
+Replace $\sigma_{ii}$ with $\epsilon_{ii}$, and $\tau_{xy}$ with $\frac{\gamma_{xy}}{2}$
+
+**Mohr's Circle of Strain**
+Plot half the shear strain against the normal strain. For Mohr's circle of strain, shear strain is plotted positive when the centre of the face has moved in a clockwise direction relative to the centre of the square.
+
+All of the other rules of Mohr's circle apply, including the fact that you can always find the principle axes where only normal strains occur.
+
+Using Mohr's circle we can find $\epsilon_1$ and $\epsilon_2$, which we can use to find stresses with $\sigma_1=\frac{E}{1-\nu^2}(\epsilon_1+\nu \epsilon_2)$
+
+**Strain Gauges**
+A wire changes length as the material it's placed on undergoes strain. The resistance of the wire will change, and we can measure this with a Wheatstone bridge
+Strain gauges cannot measure shear strain, so we set up a rosette.
+![[Pasted image 20251119141637.png]]
+Here, $\epsilon_{xx}=\epsilon_0$, $\epsilon_{yy}=\epsilon_{90}$
+We can use the equation $\epsilon_{aa}=\epsilon_{xx}\cos^2(\theta)+\epsilon_{yy}\sin^2(\theta)+\gamma_{xy}\cos(\theta)\sin(\theta)$
+Where $\epsilon_{aa}=\epsilon_{45}$
+
+**Yield Criteria**
+Y is the uniaxial yield stress of the material, where the material becomes perfectly plastic.
+Plastic straining is due to the movement of dislocations driven by shear stresses
+Hydrostatic stress never causes yield
+
+**Tresca Yield Criterion**
+A body will yield when the maximum shear stress reaches a critical value
+As we have three Mohr's circles, we must consider the largest of these three
+
+$max(|\sigma_1-\sigma_2|,|\sigma_2-\sigma_3|,|\sigma_3-\sigma_1|)=Y$
+
+With $\sigma_3=0$, this looks like the dashed line, with a non zero $\sigma_3$ we just shift it up and to the right by that amount:
+![[Pasted image 20251119142345.png]]
+
+**Von Mises Yield Criteria**
+
+A body will yield when the strain energy of distortion reaches a critical value.
+The strain energy of distortion is:
+$U_D=\frac{1}{12G}[(\sigma_1-\sigma_2)^2+(\sigma_2-\sigma_3)^2+(\sigma_3-\sigma_1)^2]$
+Therefore the von Mises yield criteria states that yield will occur when:
+$(\sigma_1-\sigma_2)^2+(\sigma_2-\sigma_3)^2+(\sigma_3-\sigma_1)^2=2Y^2$
+
+This looks like:
+![[Pasted image 20251119142752.png]]
+
+At (0,$\pm Y$) and $(\pm Y,0)$ both criterion are the same.
+The maximum discrepancy is for pure shear ($\sigma_1=-\sigma_2$) where the difference is about 15%
 

@@ -56,4 +56,10 @@ Combines the advantages of both derivative and integral action
 $1+G(s)(k_p+\frac{k_i}{s}+k_ds)$
 There are many empirical rules for tuning PID controllers (Ziegler-Nichols for example)
 
+![[Pasted image 20251121113324.png]]
+The closed loop system is only stable if the Nyquist diagram of the return ratio doesn't enclose the point "-1".
 
+Drawing Nyquist Diagrams:
+Find an expression for $G(j\omega)$, and find $|G(j\omega)|$ and $\angle G(j\omega)$
+Find how these evaluate as as $\omega \rightarrow 0$ and as $\omega \rightarrow \infty$
+If we get the result that $G(j0)\rightarrow \infty$, because of an integrator term, we must use a Taylor series expansion about $\omega = 0$ to more accurately determine the shape
