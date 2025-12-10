@@ -106,6 +106,7 @@ We can write this as $\nabla^2\phi$ where $\nabla^2$ is the Laplacian, given by 
 
 Curl $\textbf{V}$: $\nabla \times \textbf{V}$
 This acts on a vector field and gives a vector field
+Twice the local angular velocity of a fluid particle
 
 $\nabla \times \textbf{V}=\textbf{i}(\frac{\partial V_z}{\partial y}-\frac{\partial V_y}{\partial z})+\textbf{j}(\frac{\partial Vx}{\partial z}-\frac{\partial V_z}{\partial x})+\textbf{k}(\frac{\partial V_y}{\partial x}-\frac{\partial V_x}{\partial y})$
 This can be found from the determinant method of finding the vector product
