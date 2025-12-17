@@ -236,3 +236,44 @@ Explain the two microstructural changes which can occur during annealing, recove
 
 What does annealing do to the yield stress and shear stress, and why must we use the true values for both in this case?
 
+How can prior strain be used to control the final grain size?
+
+Discuss the advantages and disadvantages of hot working.
+
+How does friction play a roll in die forging, and what are its effects on the pressure needing to be applied?
+
+What does this pressure distribution look like on the slab?
+
+Why is the friction so large on any flash?
+
+Explain why rolling and forging have great similarities when considering the frictional forces on the material.
+
+**Polymer Processing and Creep**
+
+How does density and Young's modulus change with crystallinity for a thermoplastic?
+
+How does the E-T diagram look for an amorphous thermoplastic vs a thermoplastic with high crystallinity?
+
+Explain what lamellar crystallites and spherulites are.
+
+Large crystallites make the polymer opaque. How do we reduce crystallinity?
+
+Explain why drawing takes place when stressing a thermoplastic, and why orientation strengthening is beneficial.
+
+Define creep.
+
+Explain the 2 stages in the creep lifecycle.
+
+How can we model the relationship between steady state strain rate and applied stress?
+
+Explain the difference between the two creep mechanisms, power law creep and diffusion creep. What is the exponent in diffusion creep?
+
+How does the rate of diffusion creep change with grain boundary area?
+
+What is the relationship between overall time to failure and the steady state strain rate?
+
+A creep mechanism map has axes of log stress and temperature, with contours of constant strain rate, showing regions where a particular mechanism dominates. How do we find the exponent, n, using this map?
+
+How do we make turbine blades more creep resistant?
+
+How do we make a material with a single grain?
