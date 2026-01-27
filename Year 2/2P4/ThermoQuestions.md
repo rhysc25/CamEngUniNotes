@@ -74,7 +74,7 @@ Explain partial pressures.
 
 Which two quantities scale with mole fraction?
 
-State three ways in which a mixture can become satruated?
+State three ways in which a mixture can become saturated?
 
 Define the specific humidity / humidity ratio ($\omega$) in air.
 

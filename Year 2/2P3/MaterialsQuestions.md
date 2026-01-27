@@ -234,7 +234,7 @@ Why is annealing important in cold rolling, and how do we carry it out?
 
 Explain the two microstructural changes which can occur during annealing, recovery and recrystallisation.
 
-What does annealing do to the yield stress and shear stress, and why must we use the true values for both in this case?
+What does annealing do to the yield stress and strain, and why must we use the true values for both in this case?
 
 How can prior strain be used to control the final grain size?
 
@@ -262,7 +262,7 @@ Explain why drawing takes place when stressing a thermoplastic, and why orientat
 
 Define creep.
 
-Explain the 2 stages in the creep lifecycle.
+Explain the 3 stages in the creep lifecycle.
 
 How can we model the relationship between steady state strain rate and applied stress?
 

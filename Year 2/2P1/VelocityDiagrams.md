@@ -1,6 +1,11 @@
 $M\bar{y}=\int ydm$
+Perpendicular axis theorem: $I_{zz}=I_{xx}+I_{yy}$ for a lamina
+Parallel axis theorem: $I_{xx}'=I_{xx}+Mr^2$. If you're instead going from a random point to G, then you'd subtract $Mr^2$.
 
-Radius of Gyration, k, is defined such that $I_{xx}=Mk_x^2$. The value of k is the distance at which all the mass of the body can be concentrated to give the same moment of inertia
+Radius of Gyration, k, is defined such that $I_{xx}=Mk_x^2$. The value of k is the distance at which all the mass of the body can be concentrated to give the same moment of inertia. It is the radius of a hoop with the same moment of inertia.
+
+$\textbf{r}=r\textbf{e}_r$
+$\dot{\textbf{r}}=\dot{r}\textbf{e}_r+(r\dot{\theta})\textbf{e}_{\theta}$
 
 Total kinetic energy: $T=\frac{1}{2}mv^2+\frac{1}{2}I\omega^2$
 Always do about G, it will work every single time
@@ -9,14 +14,26 @@ A conservative force moving through a distance stores PE/V, recoverable
 
 D'Alembert Inertia Force = -ma acting at G
 D'Alembert Inertia Couple = -$I\dot{\omega}$
+Main method to solving mechanics questions: Draw all forces and torques and d'Alembert forces. Take moments and resolve to find $\ddot{x}$ and $\dot{\omega}$
 
 Angular momentum $\textbf{h} = I\omega \textbf{k}$
+The impulse is the change of linear momentum: $\textbf{I}_P=\Delta \textbf{P}$
 Moment about G of the impulse: $\textbf{r} \times \textbf{I}_P = \Delta \textbf{h}$
 Finite forces can be ignored when compared with impulsive forces. If there is a point P through which all impulsive forces pass then angular momentum conserves about P
+
+To solve these types of impulse equations: 
+1) First consider the conservation of angular momentum/ moment of momentum, considering the point which the impulse acts through. However always use the velocity through G and the angular velocity about it
+2) Then consider conservation of energy - or use coefficient of restitution if given
+3) Combine and solve
+
+$\dot{\textbf{e}}=\omega \times \textbf{e} = \dot{\theta} \textbf{e}^*$
 
 In polar coordinates:
 $\ddot{\textbf{r}} = (\ddot{r}-r\dot{\theta}^2)\textbf{e}_r+(2\dot{r}\dot{\theta}+r\ddot{\theta})\textbf{e}_{\theta}$
 Radial, centripetal components. Coriolis and circumferential components.
+Coriolis acceleration is logical if you consider moving outwards on a rotating turntable. Your sideways velocity will increase, so there must be sideways acceleration
+
+Use these as D'Alembert forces when the reference frame is rotating
 
 **Velocity Diagrams**
 
