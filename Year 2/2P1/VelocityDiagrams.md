@@ -41,14 +41,19 @@ Four bar mechanisms: Crank rocker, Slider crank, Quick return
 
 The instantaneous centre is the point at which all velocities are perpendicular from. $v=\rho \omega$.
 Once the velocities have been determined then a velocity diagram can be drawn
-You can then connect velocity vectors into triangles
+You can then connect velocity vectors into triangles. Do not draw arrow heads on these vectors, and write letters in lower case for velocity diagrams.
 
 Use triangles in the velocity diagram to find unknown magnitudes. The velocity direction is always perpendicular to the line linking the point and the instantaneous centre of rotation
 
+**Velocity Image**
+Once you have a velocity diagram then intermediate points on a rigid lamina that has angular velocity $\omega \textbf{k}$ can be found by inspection using the velocity image.
+As $\dot{\textbf{r}} =\omega \times \textbf{r}$, we can just rotate the position image 90 degrees in the direction of $\omega$ to give us our velocity diagram. 
+Triangles are similar in the position diagram and the velocity diagram.
+
+If we want to find the velocity of a point w which is halfway between A and B on the position diagram, then we can correctly place it halfway between a and b on the velocity diagram. Indicate this process with chevrons on the diagrams to show when you've used it.
+
 **Virtual Power**
-
 Consider a system moving/rotating slowly without friction. Net work done is zero as no energy transferred. 
-
 Therefore the sum of all the forces acting on the system times their infinitesimal distance travelled and all the torques acting on the system times the infinitesimal angle rotation = 0.
 
 During a time interval $\delta$t:
