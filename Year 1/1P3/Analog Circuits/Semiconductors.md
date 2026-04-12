@@ -1,5 +1,3 @@
-# Semiconductors
-
 ## Basic Properties
 - A semiconductor is a material whose conductivity increases as temp increases, as electrons are freed from their valence shells.
 - Holes flow in the opposite direction to electrons, the direction of hole flow = the direction of conventional current.
