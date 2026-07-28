@@ -197,3 +197,4 @@ Programmable interconnect array (PI or PIA)
 I/O control blocks:
 * Separated from logic by PI
 * Tri-state buffer control
+
