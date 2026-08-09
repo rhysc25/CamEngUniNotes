@@ -198,4 +198,30 @@ I/O control blocks:
 * Separated from logic by PI
 * Tri-state buffer control
 
-Test
+### FPGA Chip Architecture
+
+LABs, Memory blocks, Digital signal processing (DSP) blocks, Phase-locked loops (PLLs) and Transceivers
+
+Lookup Tables - Replace the product term array
+Can create complicated functions with 4 or more-input LUTs
+LUT inputs are MUX select lines
+
+2 Types of LUT memory programming -
+1) EEPROM - non-volatile
+2) SRAM - Static random-access memory - similar to a bistable to store a bit. Volatile
+
+In an FPGA we have LABs arranged in an array, with row and column programmable interconnect
+Local interconnect is between LEs, row and column interconnect is between LABs
+
+Most FPGAs use SRAM cell technology to program interconnect and LUT function levels. Two programming methods:
+1) Active: FPGA controls programming sequence automatically at power on
+2) Passive: Intelligent host (e.g. CPU) controls programming
+
+Algorithmic state machine (ASM)
+Three basic elements - conditional boxes are characteristic to ASMs
+State box - Output signals or actions (Moore type)
+Decision box - Contains a condition expression
+Conditional output box - contains conditional outputs or actions (Mealy type)
+
+Digital Signal Processing - DSP
+FPGAs have high-performance DSP capabilities through parallelism
